@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+@import './Fonts/_flaticon.scss';
+
+.App{
+font-family: "flaticon", Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,120 @@
+.admin-Navbar {
+    display: flex;
+    color: black;
+    position: relative; //aht burger-buttons absolute-position
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        width: 70%;
+        background-color: white;
+        box-shadow: 0px 0px 5px 1px white;
+        border-radius: 5px;
+    }
+
+    .burger-button {
+        display: none; //flex
+        position: absolute;
+        top: 0.75rem;
+        right: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+
+        .bar {
+            height: 3px;
+            width: 100%;
+            background-color: orange;
+            border-radius: 10px;
+            transition: all 1s ease;
+        }
+
+        &.open .bar1 {
+            transform: rotate(-45deg) translate(-5px, 5px);
+            // transform-origin:center center ;
+        }
+
+        &.open .bar2 {
+            opacity: 0;
+        }
+
+        &.open .bar3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+            // transform-origin: center center;
+        }
+    }
+
+    ul {
+        display: flex;
+
+        list-style-type: none;
+
+        li {
+            transition: all 0.5s ease;
+
+            .active {
+                color: orange;
+            }
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 1rem;
+            font-size: 1rem;
+
+            &:hover {
+                color: orange;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 0.4rem;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .Navbar {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0px;
+        .burger-button {
+            display: flex;
+        }
+
+        .navbar-container {
+            height: 0;
+            // height: 300px;
+            width: 100%;
+            overflow: hidden;
+            transition: height 1s ease;
+            justify-content: space-evenly;
+            box-shadow: 0 0 0 0;
+            border-radius: 0px;
+
+
+            &.active {
+                min-height: 400px;
+            }
+        }
+
+        ul {
+            width: 100%;
+            flex-direction: column;
+
+            li {
+                text-align: center;
+            }
+        }
+    }
+}

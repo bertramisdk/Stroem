@@ -1,0 +1,22 @@
+.Searchinput{
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 15px;
+    padding-left: 10px;
+    width: 150px;
+
+}
+
+.search-form{
+    height: 50px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.search-button{
+    position: absolute;
+    right: 0;
+}

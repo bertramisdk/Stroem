@@ -1,0 +1,107 @@
+.team-main-container {
+    // background-color: red;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.team-text-container {
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h2{
+        padding-bottom: 10px;
+        font-size: 30px;
+    }
+    
+    p{
+        padding-bottom: 80px;
+        color: grey;
+    }
+}
+
+.team-container {
+    width: 70%;
+    min-height: 400px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    .overlay {
+        position: absolute;
+        clip-path: polygon(63% 53%, 100% 46%, 100% 100%, 0 100%, 0 33%);
+        background-color:  rgb(255, 119, 0);
+        overflow: hidden;
+        width: 100%;
+        height:0px;
+        bottom: -100%;
+        right: 0;
+        left: 0;
+        transition: .5s ease;
+        z-index: 1;
+        padding-top: 150px;
+        text-align: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            font-size: 12px;
+        }
+
+
+        .social-links-team{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 10px;
+            width: 100px;
+        }
+
+      }
+}
+
+.team-card:hover .overlay{
+    bottom: 0;
+    height: 250px;
+  }
+
+.team-card {
+    width: 220px;
+    display: flex;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    .team-pictures {
+        position: absolute;
+        width: 220px;
+        align-self: end;
+    }
+
+    .background-pictures {
+        clip-path: polygon(35% 47%, 100% 31%, 100% 100%, 0 100%, 0% 38%);
+        background-color: rgb(245, 245, 245);
+        position: relative;
+        width: 220px;
+        height: 250px;
+        align-self: end;
+    }
+}
+
+@media (max-width: 800px) {
+    .team-container {
+        justify-content: center;
+    }
+}
