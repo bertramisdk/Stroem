@@ -1,7 +1,8 @@
-.footer-form {
+.kontakt-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+ width: 70%;
     
 }
 
@@ -58,6 +59,7 @@
     margin-left: 40px;
     text-align: start;
     border-width: 1px;
+    margin-right: 50px;
 
 }
 
@@ -83,27 +85,44 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
-    .footer-form {
-        display: flex;
-        flex-direction: column;
-       
+  
+    .kontakt-form {
+       display: flex;
+       flex-direction: column;
+
         
+    }
+
+    .form-name {
+        width: 340px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .form-email {
       
         margin-top: 10px;
+        width: 340px;
+        margin-left: 0px;
+        margin-right: 0px;
 
     }
     .form-telephone {
-       
+        width: 340px;
+        margin-left: 0px;
+        margin-right: 0px;
         margin-top: 10px;
     }
     .form-message {
         margin-top: 10px;
         margin-left: 0px;
+    margin-right: 0px;
+        
+        width: 320px;
+        grid-column: 1
+    
     }
     
     .kontakt-button {

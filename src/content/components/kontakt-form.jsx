@@ -4,7 +4,7 @@ import './kontakt-form.scss'
 const Kontaktform = () => {
   return (
     <div>
-    <form className='footer-form'>
+    <form className='kontakt-form'>
       <input required className='form-name' type="text" placeholder='Dit navn' />
       <input required className='form-email' type="email" placeholder='Din Email' />
       <input required className='form-telephone' type="number" placeholder='Dit tlf' />

@@ -1,16 +1,15 @@
 .Navbar {
     display: flex;
-    flex-direction: row;
     color: black;
     position: relative; //aht burger-buttons absolute-position
     height: 70px;
-    align-items: center;
     justify-content: center;
     margin-top: -35px;
     z-index: 1;
     .navbar-container {
         display: flex;
         align-items: center;
+        flex-direction: row;
         height: 70px;
         width: 70%;
         background-color: white;
@@ -54,7 +53,8 @@
 
     ul {
         display: flex;
-
+        width: 100%;
+        box-sizing: border-box;
         list-style-type: none;
 
         li {
@@ -66,11 +66,17 @@
           
         }
 
+        .search-nav{
+            display: block;
+            margin-left: 33%;
+        }
+
         a {
             display: block;
             text-decoration: none;
             color: black;
-            padding: 1rem;
+          padding-top: 1rem;
+          padding-left: 30px;
             font-size: 1rem;
 
             
@@ -91,9 +97,7 @@
 
 @media (max-width: 800px) {
 
-    .search-nav{
-        display: none;
-    }
+    
 
     .Navbar {
         flex-direction: column;
