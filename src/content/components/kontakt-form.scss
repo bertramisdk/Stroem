@@ -1,0 +1,113 @@
+.footer-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    
+}
+
+.form-name {
+    grid-row: 1;
+    grid-column: 1;
+    height: 50px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 15px;
+    background-color: white;
+    color: black;
+    border-width: 1px;
+}
+.form-email {
+    grid-row: 1;
+    grid-column: 1;
+    height: 50px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 15px;
+    background-color: white;
+    color: black;
+    margin-top: 75px;
+    border-width: 1px;
+
+}
+.form-telephone {
+    grid-row: 1;
+    grid-column: 1;
+    height: 50px;
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 15px;    
+    background-color: white;
+    color: black;
+    margin-top: 150px;
+    border-width: 1px;
+
+}
+.form-message {
+    grid-row: 1/4;
+    grid-column: 2;
+    height: 200px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 15px;
+    background-color: white;
+    color: black;
+    margin-left: 40px;
+    text-align: start;
+    border-width: 1px;
+
+}
+
+.kontakt-button {
+    grid-row: 1;
+    grid-column: 1;
+    color: white;
+    cursor: pointer;
+    width: 160px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(255, 119, 0);
+    text-align: center;
+    border: 0;
+    margin-top: 220px;
+    margin-bottom: 40px;
+}
+
+.footer-button:hover {
+    color: white;
+    background: transparent;
+    border: 1px solid rgb(255, 119, 0);
+}
+
+
+@media (max-width: 800px) {
+
+    .footer-form {
+        display: flex;
+        flex-direction: column;
+       
+        
+    }
+
+    .form-email {
+      
+        margin-top: 10px;
+
+    }
+    .form-telephone {
+       
+        margin-top: 10px;
+    }
+    .form-message {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    
+    .kontakt-button {
+        margin-top: 10px;
+    }
+
+}

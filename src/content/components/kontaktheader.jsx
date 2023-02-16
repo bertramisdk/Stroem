@@ -35,21 +35,21 @@ const Kontaktheader = () => {
     <div className="top-card-container">
         <div className='card-container'>
         <div className="top-card">
-          <h2><span><ImLocation/></span>Adresse</h2>
+          <h2><span className='logo-color'><ImLocation/></span>Adresse</h2>
           { kontakt &&
-            <p>{kontakt.address + ", " + kontakt.zipcity}</p>
+            <p className='description-color'>{kontakt.address + ", " + kontakt.zipcity}</p>
           }
         </div>
         <div className="top-card-l">
-          <h2><span><BsTelephoneFill/></span>Telefon</h2>
+          <h2><span className='logo-color'><BsTelephoneFill/></span>Telefon</h2>
           { kontakt &&
-            <p>{kontakt.phone}</p>
+            <p className='description-color'>{kontakt.phone}</p>
           }
         </div>
         <div className="top-card-l">  
-          <h2><span><GrMail/></span>Email</h2>
+          <h2><span className='logo-color'><GrMail/></span>Email</h2>
           { kontakt &&
-            <p>{kontakt.email}</p>
+            <p className='description-color'>{kontakt.email}</p>
           }
         </div>
         </div>

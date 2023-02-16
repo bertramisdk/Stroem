@@ -58,14 +58,12 @@ export const getSlider = () => {
     return response;
   };
 
-  // Delete - slet udvalgt tour
+ 
 export const deleteNyhed = (nyhedID) => {
   let response = axiosBase.delete("news/admin/" + nyhedID);
   return response;
 };
 
-// {headers:{"Content-Type":"multipart/form-data"}
-//  Post - opret 
 
 
 export const createNyhed = (newNyhed) => {
@@ -81,7 +79,7 @@ export const getNyhedByID = (ID) => {
 };
 
 
-//  Put - ret
+
 export const editNyhed = (updatedNyhed, nyhedID) => {
   let response = axiosBase.put("news/admin/" + nyhedID, updatedNyhed );
   return response;

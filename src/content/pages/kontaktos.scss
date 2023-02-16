@@ -1,13 +1,45 @@
 .map{
-    width:600px; 
-    height:450px; 
+    width:400px; 
+    height:350px; 
     border:0;
+
 }
 
-.kontakt-info-container{
-    width: 100%;
-    height: 500px;
+
+
+.logo-color{
+    color: rgb(255, 119, 0);
+}
+
+.description-color{
+    color: grey;
+}
+
+
+.kontakt-container{
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.content-contianer{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between  ;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+
+@media (max-width: 1000px) {
+
+    .content-contianer{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center ;
+    } 
+
+  
+
 }
