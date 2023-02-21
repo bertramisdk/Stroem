@@ -45,8 +45,8 @@ const Team = () => {
 
 
         <div className='team-container'>
-        { team && team.map( t =>
-        <div className='team-card'>
+        { team && team.map( (t, idx) =>
+        <div className='team-card' key={idx}>
             <div className="overlay">
                 <h2>{t.name}</h2>
                <p>{t.title}</p>

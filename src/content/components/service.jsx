@@ -39,8 +39,8 @@ const Service = () => {
                     <p className='p-head'>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
 
                     <div className='service-text-card'>
-                        { service && service.map( s =>
-                            <div className='text-card'>
+                        { service && service.map( (s, idx) =>
+                            <div className='text-card' key={idx}>
                                 <span className={s.icon}></span>
                                 <div>
                                 <h3>{ s.title }</h3>

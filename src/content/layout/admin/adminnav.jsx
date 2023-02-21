@@ -27,7 +27,7 @@ const Adminnav = () => {
           <li><NavLink to="/admin" end>FORSIDE</NavLink></li>
         <li><NavLink to="nyheder">NYHEDER</NavLink></li>
         <li><NavLink to="nyhederopret">NYHEDER OPRET</NavLink></li>
-          <li><NavLink to="adminfaq">NYHEDER</NavLink></li>
+          
         
 
       

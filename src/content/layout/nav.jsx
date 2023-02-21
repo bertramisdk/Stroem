@@ -8,7 +8,7 @@ import './nav.scss'
 const Nav = () => {
 
   // Hent "user" - for at se om der er logget ind
-  const { user, } = useContext( LoginContext );
+
 
   const [showMenu, setShowMenu] = useState(false)
 
@@ -34,21 +34,8 @@ const Nav = () => {
           <li><NavLink to="nyheder">NYHEDER</NavLink></li>
           <li><NavLink to="kontaktos">KONTAKT OS</NavLink></li>
 
-          {
-            //  Hvis der er en bruger i "global state/context"
-            user ?
-            <>
-                {/* <li><Logout /></li> */}
-                <li><NavLink to="admin">LOGIN</NavLink></li>
-              </>
-              :
-              <>
-                <li><NavLink to="login">LOGIN</NavLink></li>
-              </>
-          }
-
-          <div className='search-nav'><SearchInput /></div>
-        </ul>
+               </ul>
+          <SearchInput/>
       </div>
     </nav>
   )

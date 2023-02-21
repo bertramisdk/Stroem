@@ -38,8 +38,8 @@ const NyesteNyheder = () => {
 
 
         <div className="nye-card-container">
-          { nyheder && nyheder.map( n =>
-            <div className='nye-card'>
+          { nyheder && nyheder.map( (n, idx) =>
+            <div className='nye-card' key={idx}>
               <div className="nye-overlay">
                 <h2 className='nye-date'>
                   {new Date (n.received).toLocaleDateString("en-GB", {day: "numeric", month: "short"})}
