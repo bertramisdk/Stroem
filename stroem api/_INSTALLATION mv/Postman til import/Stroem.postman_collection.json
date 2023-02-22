@@ -1,0 +1,2200 @@
+{
+	"info": {
+		"_postman_id": "935ed8d8-8ed9-439a-b8e6-ba2715899438",
+		"name": "Stroem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "About",
+			"item": [
+				{
+					"name": "Hent about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/about",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"about"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret about (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Lidt om STRØM",
+									"type": "text"
+								},
+								{
+									"key": "teaser",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus.",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "<p><strong>Hvem er vi</strong></p>\n<p>Derudover er vores el-firma eksperter inden for str&oslash;mbesparende l&oslash;sninger. S&aring; &oslash;nsker du at spare p&aring; energien, har vi et bredt udvalg af produkter og komponenter til elinstallationer, som gavner b&aring;de elregningen og milj&oslash;et.</p>\n<ul>\n<li>Antenneinstallation</li>\n<li>Varmepumper</li>\n<li>Solceller</li>\n<li>Og meget andet ...</li>\n</ul>",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Eksamensprojekter og EKSAMEN/Webudvikler - hovedforløb/Strøm-oktober2022/Oplæg fra ma/images/about/1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/about/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"about",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Hent alle bookings (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/booking/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"booking",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt booking - ud fra ID (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/booking/admin/6363a4370fbd436b273e673c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"booking",
+								"admin",
+								"6363a4370fbd436b273e673c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jens Jensen",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "xxx@xxxx.dk",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12121212",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret booking",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jens Jensen Hansen",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jh@jeha.dk",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "85858585",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "Her er en note til bookingen",
+									"type": "default"
+								},
+								{
+									"key": "accept",
+									"value": "true",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/booking/admin/6363a4370fbd436b273e673c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"booking",
+								"admin",
+								"6363a4370fbd436b273e673c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret booking accept (ADMIN)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accept",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/booking/accept/admin/6363a4370fbd436b273e673c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"booking",
+								"accept",
+								"admin",
+								"6363a4370fbd436b273e673c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret booking note (ADMIN)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "note",
+									"value": "Her er en vigtig note fra administrator om den pågældende booking - fx at kunden er kontaktet og der ligger en bestilling i systemet.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/booking/note/admin/6363a4370fbd436b273e673c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"booking",
+								"note",
+								"admin",
+								"6363a4370fbd436b273e673c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet booking (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/booking/admin/6362ce2ddaa9a1ae073c98a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"booking",
+								"admin",
+								"6362ce2ddaa9a1ae073c98a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Hent alle contact (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/contact/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contact",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt contact - ud fra ID (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/contact/admin/6363a7492632dd14e3c98d52",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contact",
+								"admin",
+								"6363a7492632dd14e3c98d52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jens Jensen",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "xxx@xxxx.dk",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12121212",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Her er en besked fra hjemmesidens kontaktformular",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret contact read-status (ADMIN)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "read",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/contact/admin/6363a7492632dd14e3c98d52",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contact",
+								"admin",
+								"6363a7492632dd14e3c98d52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet contact (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/contact/admin/6363a7932632dd14e3c98d5a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contact",
+								"admin",
+								"6363a7932632dd14e3c98d5a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contactinformation",
+			"item": [
+				{
+					"name": "Hent contactinformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/contactinformation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contactinformation"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret contactinformation (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "company",
+									"value": "Strøm A/S",
+									"type": "text"
+								},
+								{
+									"key": "cvr",
+									"value": "1058745638",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Strømparken 1",
+									"type": "text"
+								},
+								{
+									"key": "zipcity",
+									"value": "8500 Grenaa",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "(+45) 86 45 45 78",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "info@stroem.dk",
+									"type": "text"
+								},
+								{
+									"key": "openinghours",
+									"value": "Man - fre 9.00 - 18.00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/contactinformation/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contactinformation",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				},
+				{
+					"name": "Opret social-media contactinformation (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Facebook",
+									"type": "text"
+								},
+								{
+									"key": "link",
+									"value": "https://facebook/stroem-grenaa",
+									"type": "text"
+								},
+								{
+									"key": "icon",
+									"value": "fa-facebook",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/contactinformation/some/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contactinformation",
+								"some",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				},
+				{
+					"name": "Slet social-media contactinformation (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5333/contactinformation/some/admin/635d78944e837c6a2b0fdaa2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"contactinformation",
+								"some",
+								"admin",
+								"635d78944e837c6a2b0fdaa2"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FAQ",
+			"item": [
+				{
+					"name": "Hent alle FAQ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/faq",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"faq"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt FAQ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/faq/6363a8f62632dd14e3c98d83",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"faq",
+								"6363a8f62632dd14e3c98d83"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret FAQ (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question",
+									"value": "Kan man trække det fra?",
+									"type": "text"
+								},
+								{
+									"key": "answer",
+									"value": "Man kan fremad se og hvad tror du selv! At de har været udset til at læse, at der skal dannes par af ligheder. Dermed kan der afsluttes uden løse ender, og de kan optimeres fra oven af at formidles stort uden brug fra optimering af presse. I en kant af landet går der blandt om, at de vil sætte den over forbehold for tiden. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/faq/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"faq",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret FAQ (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "question",
+									"value": "Kan man trække det fra?",
+									"type": "text"
+								},
+								{
+									"key": "answer",
+									"value": "Man kan fremad se og hvad tror du selv! At de har været udset til at læse, at der skal dannes par af ligheder. Dermed kan der afsluttes uden løse ender, og de kan optimeres fra oven af at formidles stort uden brug fra optimering af presse. I en kant af landet går der blandt om, at de vil sætte den over forbehold for tiden. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/faq/admin/6363a9272632dd14e3c98d87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"faq",
+								"admin",
+								"6363a9272632dd14e3c98d87"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet FAQ (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/faq/admin/6363a9272632dd14e3c98d87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"faq",
+								"admin",
+								"6363a9272632dd14e3c98d87"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Comments",
+					"item": [
+						{
+							"name": "Opret comment/kommentar til nyhed (USER)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Jens Jensen",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "Her er en kommentar til en nyhed",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5333/news/comment/6367d2052632dd14e3c98e16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5333",
+									"path": [
+										"news",
+										"comment",
+										"6367d2052632dd14e3c98e16"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Publish - godkend - comment til news (ADMIN)",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "publish",
+											"value": "true",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5333/news/comment/admin/6367d2052632dd14e3c98e16/6367d24a2632dd14e3c98e1b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5333",
+									"path": [
+										"news",
+										"comment",
+										"admin",
+										"6367d2052632dd14e3c98e16",
+										"6367d24a2632dd14e3c98e1b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Slet comment til news (ADMIN)",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:5333/news/comment/admin/6367d2052632dd14e3c98e16/6367d24a2632dd14e3c98e1b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5333",
+									"path": [
+										"news",
+										"comment",
+										"admin",
+										"6367d2052632dd14e3c98e16",
+										"6367d24a2632dd14e3c98e1b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Hent alle news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/news",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/news/6363a9ba2632dd14e3c98d93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"news",
+								"6363a9ba2632dd14e3c98d93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret news (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vi har styr på strømmen",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Men hvor vi nu overbringer denne størrelse til det søgeoptimering handler om, så kan der fortælles op til 3 gange. Hvis det er træet til dit bord der får dig op, er det snarere varmen over de andre. Selv om hun har sat alt mere frem, og derfor ikke længere kan betragtes som den glade giver, er det en nem sammenstilling, som bærer ved i lang tid. ",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/news/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"news",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret news (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Vi har styr på strømmen rettet",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Men rettet hvor vi nu overbringer denne størrelse til det søgeoptimering handler om, så kan der fortælles op til 3 gange. Hvis det er træet til dit bord der får dig op, er det snarere varmen over de andre. Selv om hun har sat alt mere frem, og derfor ikke længere kan betragtes som den glade giver, er det en nem sammenstilling, som bærer ved i lang tid. ",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/news/admin/6367d2052632dd14e3c98e16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"news",
+								"admin",
+								"6367d2052632dd14e3c98e16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet news (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/news/admin/6367d2052632dd14e3c98e16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"news",
+								"admin",
+								"6367d2052632dd14e3c98e16"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Newssubscription",
+			"item": [
+				{
+					"name": "Hent alle newssubscription (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/newssubscription/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"newssubscription",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt newssubscription - ud fra ID (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/newssubscription/admin/6255c7356ebf5e6d4fd6133e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"newssubscription",
+								"admin",
+								"6255c7356ebf5e6d4fd6133e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret newssubscription",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "nytilmelding@testmail.dk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/newssubscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"newssubscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret newssubscription (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "rettettilmeldingrettet@testmail.dk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/newssubscription/admin/63639caf093e9a98569681fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"newssubscription",
+								"admin",
+								"63639caf093e9a98569681fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet newssubscription - ud fra ID (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/newssubscription/admin/63639caf093e9a98569681fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"newssubscription",
+								"admin",
+								"63639caf093e9a98569681fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet/afmeld newssubscription - ud fra email",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:5333/newssubscription/afmeld/nytilmelding@testmail.dk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"newssubscription",
+								"afmeld",
+								"nytilmelding@testmail.dk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search - søgning i news og services",
+			"item": [
+				{
+					"name": "Søgning i news og services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/search/tes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"search",
+								"tes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "Hent alle services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/service/6367d7202632dd14e3c98e5e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"service",
+								"6367d7202632dd14e3c98e5e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret service (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Varme",
+									"type": "text"
+								},
+								{
+									"key": "teaser",
+									"value": "Ennius et sapines et fortis et alter Homerus, ut critici dicunt, leviter curare videtur, quo promissa cadant et somnia Pythagorea. Naevius in manibus non est et mentibus haeret paene recens. Adeo sanctum est vetus omne poema. ambigitur quotiens, uter utro sit prior, aufert Pacuvius docti famam senis Accius alti.",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "<p>Det g&oslash;r heller ikke mere. Men hvor vi nu overbringer denne st&oslash;rrelse til det s&oslash;geoptimering handler om, s&aring; kan der fort&aelig;lles op til 3 gange. <strong>Hvis det er tr&aelig;et til dit bord der f&aring;r dig op, er det snarere varmen over de andre. Selv om hun har sat alt mere frem, og derfor ikke l&aelig;ngere kan betragtes som den glade giver, er det en nem sammenstilling, som b&aelig;rer ved i lang tid.</strong></p>\n<p>Det g&aring;r der s&aring; nogle timer ud, hvor det er indlysende at online webdesign i og med at virkeligheden bliver tydelig istands&aelig;ttelse. Det er opmuntrende og anderledes, at det er dampet af kurset i morgen.</p>\n<ol>\n<li>Der indgives hvert &aring;r enorme strenge</li>\n<li>Af blade af st&oslash;rre eller mindre tilsnit</li>\n</ol>\n<p>Man kan fremad se, at de har v&aelig;ret udset til at l&aelig;se, at der skal dannes par af ligheder. Dermed kan der afsluttes uden l&oslash;se ender, og de kan optimeres fra oven af at formidles stort uden brug fra optimering af presse. I en kant af landet g&aring;r der blandt om, at de vil s&aelig;tte den over forbehold for tiden. Vi flotter med et hold, der vil rundt og se sig om i byen.</p>",
+									"type": "text"
+								},
+								{
+									"key": "icon",
+									"value": "flaticon-air-conditioner-1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Eksamensprojekter og EKSAMEN/Webudvikler - hovedforløb/Strøm-oktober2022/Oplæg fra ma/images/blog/8.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/service/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"service",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret service (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Tur lorem ipsum rettet2",
+									"type": "text"
+								},
+								{
+									"key": "teaser",
+									"value": "Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "icon",
+									"value": "flaticon-lamp",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Eksamensprojekter og EKSAMEN/Webudvikler - hovedforløb/Strøm-oktober2022/Oplæg fra ma/images/blog/7.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/service/admin/635ecf565936675840873ea4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"service",
+								"admin",
+								"635ecf565936675840873ea4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet service (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/service/admin/63626422996bcd765eb0befb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"service",
+								"admin",
+								"63626422996bcd765eb0befb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Slider",
+			"item": [
+				{
+					"name": "Hent alle slider",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/slider",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"slider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt slider - ud fra ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/slider/635e7d1eb8c82f3d06a9c42f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"slider",
+								"635e7d1eb8c82f3d06a9c42f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret slider (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Eksamensprojekter og EKSAMEN/Webudvikler - hovedforløb/Strøm-oktober2022/Oplæg fra ma/images/slider/3.jpg"
+								},
+								{
+									"key": "caption",
+									"value": "Sliders image caption og alt-tekst her",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/slider/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"slider",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret slider (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "caption",
+									"value": "Sliders image caption og alt-tekst her - rettet",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/slider/admin/635e7d5fb8c82f3d06a9c436",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"slider",
+								"admin",
+								"635e7d5fb8c82f3d06a9c436"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet slider (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/slider/admin/635e7d5fb8c82f3d06a9c436",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"slider",
+								"admin",
+								"635e7d5fb8c82f3d06a9c436"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "Hent alle team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/team",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"team"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/team/6367dbd12632dd14e3c98e70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"team",
+								"6367dbd12632dd14e3c98e70"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret team (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lars Jensen",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Elektriker",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/team/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"team",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret team (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Peter Petersens",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Elektriker",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/team/admin/6367dc172632dd14e3c98e79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"team",
+								"admin",
+								"6367dc172632dd14e3c98e79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet team (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/team/admin/6367dee754adeecd08ed650a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"team",
+								"admin",
+								"6367dee754adeecd08ed650a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testimonial",
+			"item": [
+				{
+					"name": "Hent alle testimonials",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/testimonial",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"testimonial"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt testimonial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/testimonial/617af72128fc8765b05fbbc5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"testimonial",
+								"617af72128fc8765b05fbbc5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret testimonial (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Mega nice",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Janus Hansen",
+									"type": "text"
+								},
+								{
+									"key": "review",
+									"value": "Lorem ipsum dolor sit amet constur adipisicing elit, sed do eiusmtempor incid et dolore magna aliqu enim ad minim veniam quis nostrud exer cittion ullamco laboris ",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/testimonial/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"testimonial",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret testimonial (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Glad kunde rettet igen",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Lise Hansenor",
+									"type": "text"
+								},
+								{
+									"key": "review",
+									"value": "Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/testimonial/admin/635ed86b99101ada67635ae0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"testimonial",
+								"admin",
+								"635ed86b99101ada67635ae0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet testimonial (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/testimonial/admin/635eda12d60c70d7bbc58c65",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"testimonial",
+								"admin",
+								"635eda12d60c70d7bbc58c65"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Hent alle user (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/user/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"user",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent user - ud fra ID (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/user/admin/6367dd53faa551dd4d6cfd8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"user",
+								"admin",
+								"6367dd53faa551dd4d6cfd8e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret user (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Erik Frederiksen",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ef@stroem.dk",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user789",
+									"type": "text"
+								},
+								{
+									"key": "admin",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/user/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"user",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret user (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Signe Nybruger Larsen",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mail@mail.dk",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "rettetpassword123",
+									"type": "text"
+								},
+								{
+									"key": "admin",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/user/admin/6367ddb8faa551dd4d6cfd97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"user",
+								"admin",
+								"6367ddb8faa551dd4d6cfd97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet user (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/user/admin/6367ddb8faa551dd4d6cfd97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"user",
+								"admin",
+								"6367ddb8faa551dd4d6cfd97"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded",
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman."
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "el@stroem.dk",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5333/login/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"login",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/login/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"login",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logged in ?",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5333/login/loggedin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5333",
+							"path": [
+								"login",
+								"loggedin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoints + imagepath",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5333/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5333",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
