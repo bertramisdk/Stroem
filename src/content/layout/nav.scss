@@ -14,7 +14,7 @@
         height: 100%;
         width: 70%;
         background-color: white;
-        box-shadow: 0px 0px 5px 1px white;
+        box-shadow: 0px 0px 5px 1px black;
         border-radius: 5px;
    
     }
@@ -124,10 +124,17 @@
             box-shadow: 0 0 0 0;
             border-radius: 0px;
             flex-direction: column;
+            border-bottom: 1px black solid;
 
 
             &.active {
                 min-height: 400px;
+            }
+
+            .search-form{
+                height: 50px;
+                width: 150px;
+                margin-left: 30px;
             }
         }
 

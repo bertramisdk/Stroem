@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Loader from '../../components/Loader'
 import { getNyhedByID, editNyhed } from '../../helpers/AdminFetch'
 import ErrorMessage from '../../components/ErrorMessage'
+import './adminnyhederret.scss'
 
 
 
@@ -51,7 +52,7 @@ const AdminNyhedEdit = () => {
     editNyhed( formData, ID )
       .then( ( response ) => {
         console.log( response.data )
-        setMessage( "Nyheden er rettet!" )
+        window.alert( "Nyheden er rettet!" )
 
       } )
       .catch( ( err ) => {
@@ -67,6 +68,8 @@ const AdminNyhedEdit = () => {
 
   return (
     <div className='AdminNyhedRet'>
+         <div className='AdminNyhedRet-main-container'>
+            <div className='AdminNyhedRet-container'>
 
       <h1>Ret Nyhed</h1>
 
@@ -82,14 +85,14 @@ const AdminNyhedEdit = () => {
             <div>
               <label htmlFor='inpTitle'>Nyhedens titel:</label>
               <br />
-              <input type="text" name="title" defaultValue={ nyhed.title } id="inpTitle" required />
+              <input className='ret-form-inputs-nyheder' type="text" name="title" defaultValue={ nyhed.title } id="inpTitle" required />
             </div>
 
             {/* Teser */ }
             <div>
               <label htmlFor='inpTeaser'>Nyhedens content:</label>
               <br />
-              <textarea name="content" defaultValue={ nyhed.content } id="inpTeaser" required />
+              <textarea className='ret-form-inputs-nyheder' name="content" defaultValue={ nyhed.content } id="inpTeaser" required />
 
             </div>
 
@@ -97,14 +100,14 @@ const AdminNyhedEdit = () => {
             {/* image */ }
             <div>
               <p>Nuværende coverbilled:</p>
-              <img src={ "http://localhost:5333/images/news/" + nyhed.image } width="200px" />
+              <img className='cover-padding' src={ "http://localhost:5333/images/news/" + nyhed.image } width="200px" />
               <br />
               <label htmlFor='img'>Vælg evt. et andet coverbilled</label>
               <br />
-              <input type="file" accept='image/*' name="image" id="img" />
+              <input className='cover-padding' type="file" accept='image/*' name="image" id="img" />
             </div>
 
-            <button type='submit'>Ret tur</button>
+            <button className='ret-button' type='submit'>Ret tur</button>
 
 
 
@@ -115,6 +118,9 @@ const AdminNyhedEdit = () => {
 
 
     </div>
+    </div>
+    </div>
+   
   )
 }
 

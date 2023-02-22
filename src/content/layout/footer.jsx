@@ -53,7 +53,7 @@ const Footer = () => {
             <p> {"> "} 
               {
                 user ?
-                  <NavLink to="admin">LOGIN</NavLink>
+                  <NavLink to="/admin/nyheder">LOGIN</NavLink>
                   :
                   <NavLink to="login">LOGIN</NavLink>
               }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { createNyhed } from '../../helpers/AdminFetch'
+import './admincreatenyheder.scss'
 
 
 
@@ -23,9 +24,9 @@ const AdminCreateNyheder = () => {
 
         
         createNyhed( formData )
-            .then( ( response ) => {
+            .then( () => {
                 e.target.reset() // Tømmere formularfelterne
-                setMessage( "ny tur er oprettet! id nummer: " + response.data._id )
+                window.confirm( "ny nyhed er oprettet! id nummer: ")
 
             } )
             .catch( ( err ) => {
@@ -40,9 +41,10 @@ const AdminCreateNyheder = () => {
 
 
     return (
-        <div className='AdminNyhedCreate'>
+        <div className='AdminNyhedCreate-main-container'>
+            <div className='AdminNyhedCreate-container'>
 
-            <h1>Opret en ny tur</h1>
+            <h1>Opret en ny nyhed</h1>
 
             { message && <h2>{ message }</h2> }
             <form onSubmit={ handleSubmit }>
@@ -51,14 +53,14 @@ const AdminCreateNyheder = () => {
                 <div>
                     <label htmlFor='title'>Nyhedens titel:</label>
                     <br />
-                    <input type="text" name="title" placeholder='Skriv din titel her' id="title" required />
+                    <input className='form-inputs-nyheder' type="text" name="title" placeholder='Skriv din titel her' id="title" required />
                 </div>
 
                 {/* ----- Teaser ----- */ }
                 <div>
                     <label htmlFor='content'> Nyhedens content</label>
                     <br />
-                    <textarea name="content" placeholder='Skriv din teaser her' id="content" required />
+                    <textarea className='form-inputs-nyheder' name="content" placeholder='Skriv din teaser her' id="content" required />
 
                 </div>
 
@@ -69,12 +71,13 @@ const AdminCreateNyheder = () => {
                     <input type="file" accept='image/*' name="image" id="img" required />
                 </div>
 
-                <button type='submit'>Opret Nyhed</button>
+                <button className='create-button' type='submit'>Opret Nyhed</button>
 
 
 
 
             </form>
+            </div>
         </div>
     )
 }

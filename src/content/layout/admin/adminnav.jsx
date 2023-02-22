@@ -24,8 +24,7 @@ const Adminnav = () => {
       <div className={showMenu === true ? "admin-navbar-container active" : "admin-navbar-container"}>
         <ul>
           <li><NavLink to="/">TILBAGE TIL PUBLIC</NavLink></li>
-          <li><NavLink to="/admin" end>FORSIDE</NavLink></li>
-        <li><NavLink to="nyheder">NYHEDER</NavLink></li>
+        <li><NavLink to="/admin/nyheder">NYHEDER</NavLink></li>
         <li><NavLink to="nyhederopret">NYHEDER OPRET</NavLink></li>
           
         

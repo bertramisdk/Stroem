@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Navigate } from 'react-router-dom';
+import './login.scss'
 
 // Hent Login fra contextprovider
 import { LoginContext } from '../context/logincontext'
@@ -15,7 +16,7 @@ const Login = () => {
 
   // Når man allerede er logget ind sendes man direkte til admin
   if ( user ) {
-    return <Navigate to="/admin" replace />
+    return <Navigate to="/admin/nyheder" replace />
   }
 
   // Håndtere login - med indhold fra login-form
@@ -35,26 +36,29 @@ const Login = () => {
       {/* {
         user && <h2>Bruger er logget som: { user }</h2>
       } */}
-
+      <div className="main-login-container">
+  <div className='login-container'>
       <h1>Login</h1>
       <form onSubmit={ handleLogin }>
 
         <div>
-          <label htmlFor='inpBruger'>Brugernavn:</label>
+       
           <br />
           <input type="text" onChange={ ( e ) => setUserName( e.target.value ) } id="inpBruger" placeholder="Brugernavn" />
         </div>
 
         <div>
-          <label htmlFor='inpPassword'>Adgangskode:</label>
+         
           <br />
           <input type="password" onChange={ ( e ) => setPassword( e.target.value ) } id="inpPassword" placeholder='Adgangskpde' />
         </div>
 
-        <button type="submit">Login</button>
+        <button className='login-button' type="submit">Login</button>
 
       </form>
     </div>
+  </div>
+  </div>
   )
 }
 

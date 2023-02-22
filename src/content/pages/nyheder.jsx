@@ -46,8 +46,7 @@ const Nyheder = () => {
             </div>
         </div>
       </div>
-          <div className="nyheder-content-container">
-
+      
             <div className="nyheder-container">
               <div className="nyheder-card-container">
                 <div className="cards-container">
@@ -125,7 +124,7 @@ const Nyheder = () => {
 
           </div>
 
-        </div>
+  
         )
 }
 
