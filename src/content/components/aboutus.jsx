@@ -40,7 +40,7 @@ const Aboutus = () => {
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>consectetur adipisicing elit. A, veniam.</li>
 
-                    <button className='aboutus-button'>Kontakt os</button>
+                    <button className='aboutus-button'><a href="kontaktos"> Kontakt os</a></button>
 
                 </div>
 

@@ -33,7 +33,7 @@ const About = () => {
         <div className='stroem-container'>
           <h2>{ parser( about.title ) }</h2>
           <p className='teaser'>{ about.teaser }</p>
-          <button className='stroem-button'>Læs mere</button>
+          <button className='stroem-button'><a href="omos"> Læs mere</a></button>
 
         </div>
       }

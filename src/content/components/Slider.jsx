@@ -69,7 +69,7 @@ const Slider = ( props ) => {
                             <img src={ imagePath + s.image } style={ { width: "100%" } } />
                             <div className='slider-text-container'>
                              <div className="text">{parser(s.caption)}</div> 
-                             <button className='slider-button'>KONTAKT OS</button>
+                              <button className='slider-button'><a className='links' href="kontaktos">KONTAKT OS</a></button> 
                             </div>
                         </div>
 

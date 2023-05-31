@@ -54,7 +54,7 @@ const NyesteNyheder = () => {
         </div>
 
 
-        <button className='nye-button'>Flere nyheder...</button>
+        <button className='nye-button'><a href="nyheder"> Flere nyheder...</a></button>
 
 
       </div>
